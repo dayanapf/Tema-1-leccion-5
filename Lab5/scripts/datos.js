@@ -51,6 +51,7 @@ $(document).ready(function() {
             if(campos_vacios.length > 1)
                 {
                     alert(campos_vacios);
+                    return false;  
                 }
                 else{
                     alert("Formulario válido");

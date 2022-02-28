@@ -20,7 +20,8 @@ $(document).ready(function() {
           usuario.css({"borderColor":"red"});
           pass.css({"borderColor":"red"});
           correo.css({"borderColor":"red"});
-          alert("Los campos estan vacios");          
+          alert("Los campos estan vacios"); 
+          return false;         
       }
       else if((usurio_vacio && pass_vacio) || (usurio_vacio && correo_vacio) || (pass_vacio && correo_vacio) )
       {
@@ -42,18 +43,22 @@ $(document).ready(function() {
               i++;
           }
           alert("Los campos " + alert_vacios + " no pueden estar vacios");
+          return false;  
       }else if(usurio_vacio || pass_vacio || correo_vacio){
          if(usurio_vacio){   
             usuario.css({"borderColor":"red"});
              alert("El campo usuario no puede estar vacio");
+             return false;  
          }
          else if(pass_vacio){        
             pass.css({"borderColor":"red"});
-             alert("El campo password no puede estar vacio");      
+             alert("El campo password no puede estar vacio");  
+             return false;      
          }
          else if(correo_vacio){             
             correo.css({"borderColor":"red"});
              alert("El campo correo no puede estar vacio");
+             return false;  
          }        
          
      }
